@@ -1,40 +1,35 @@
-<!-- ...
-<div class="column is-offset-4 is-4">
-    {% for weather in weather_data %}
-    <div class="box">
-        <article class="media">
-            <div class="media-left">
-                <figure class="image is-50x50">
-                    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <span class="title">{{ weather.city }}</span>
-                        <br>
-                        <span class="subtitle">{{ weather.temperature }}° F</span>
-                        <br> {{ weather.description }}
-                    </p>
-                </div>
-            </div>
-        </article>
-    </div>
-    {% endfor %}
-</div>
-...
-...
-<form method="POST">
-    {% csrf_token %}
-    <div class="field has-addons">
-        <div class="control is-expanded">
-            {{ form.name }}
-        </div>
-        <div class="control">
-            <button class="button is-info">
-                Add City
-            </button>
-        </div>
-    </div>
-</form>
-... -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather API</title>
+</head>
+<body>
+
+{{weather}}
+
+
+<table border="1">
+    <tr>
+        <th>Temperature</th>
+        <th>Feels like</th>
+        <th>Min temp</th>
+        <th>Max temp</th>
+        <th>Pressure</th>
+        <th>Sea level</th>
+    </tr>
+    <tr>
+        <td>{{weather.temp}}</td>
+        <td>{{weather.temp}}</td>
+        <td>277.5</td>
+        <td>278.8</td>
+        <td>1026</td>
+        <td>1026</td>
+    </tr>
+</table>
+
+</body>
+</html>
